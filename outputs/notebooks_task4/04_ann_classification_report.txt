@@ -1,0 +1,21 @@
+                  precision    recall  f1-score   support
+
+       Big Onion      0.643     0.900     0.750        20
+Chillies (Green)      0.846     0.550     0.667        20
+          Cowpea      0.700     0.700     0.700        20
+        Gingelly      0.471     0.400     0.432        20
+      Green Gram      0.952     1.000     0.976        20
+     Ground Nuts      0.640     0.800     0.711        20
+        Kurakkan      0.471     0.400     0.432        20
+           Maize      0.792     0.950     0.864        20
+          Manioc      0.818     0.900     0.857        20
+          Meneri      0.375     0.450     0.409        20
+         Mustard      1.000     0.850     0.919        20
+        Potatoes      1.000     1.000     1.000        20
+       Red Onion      0.643     0.450     0.529        20
+         Sorghum      0.789     0.750     0.769        20
+  Sweet Potatoes      0.842     0.800     0.821        20
+
+        accuracy                          0.727       300
+       macro avg      0.732     0.727     0.722       300
+    weighted avg      0.732     0.727     0.722       300
