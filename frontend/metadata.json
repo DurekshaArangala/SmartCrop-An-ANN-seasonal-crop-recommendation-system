@@ -1,0 +1,6 @@
+{
+  "name": "SmartCrop",
+  "description": "AI-Powered Smart Crop Recommendation System with Crop Surplus Prevention for Sri Lankan Farmers",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

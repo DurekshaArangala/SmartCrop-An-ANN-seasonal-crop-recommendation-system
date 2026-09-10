@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+venv/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.env
+outputs/notebooks_task5.zip

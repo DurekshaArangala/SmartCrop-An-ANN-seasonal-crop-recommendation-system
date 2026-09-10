@@ -142,6 +142,41 @@ def recommend(district, season, weather_mode="historical", top_k=3):
     return _predict(vector, top_k)
 
 
+def recommend_with_context(district, season, weather_mode="forecast", top_k=3):
+
+    _lazy_load()
+
+    if season not in SEASON_MONTHS:
+        raise ValueError("season must be 'Maha' or 'Yala'")
+
+    soil_feats = _get_soil_features(district)
+
+    if weather_mode == "historical":
+        weather_feats = _get_weather_features_historical(district, season)
+    elif weather_mode == "forecast":
+        weather_feats = _get_weather_features_forecast(district, season)
+    else:
+        raise ValueError("weather_mode must be 'historical' or 'forecast'")
+
+    features = {**soil_feats, **weather_feats}
+    vector = np.array([[features[col] for col in FEATURE_ORDER]])
+
+    predictions = _predict(vector, top_k)
+
+    return {
+        "features": {
+            "N": round(float(features["N"]), 2),
+            "P": round(float(features["P"]), 2),
+            "K": round(float(features["K"]), 2),
+            "ph": round(float(features["ph"]), 2),
+            "temperature": round(float(features["temperature"]), 2),
+            "humidity": round(float(features["humidity"]), 2),
+            "rainfall": round(float(features["rainfall"]), 2),
+        },
+        "predictions": predictions,
+    }
+
+
 def recommend_manual(N, P, K, temperature, humidity, ph, rainfall, top_k=3):
 
     _lazy_load()
