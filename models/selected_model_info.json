@@ -1,5 +1,5 @@
 {
-  "model_name": "Random Forest",
-  "model_type": "sklearn",
-  "model_path": "models/ml_baselines/random_forest.pkl"
+  "model_name": "ANN",
+  "model_type": "keras",
+  "model_path": "models/ann_crop_recommender.keras"
 }
