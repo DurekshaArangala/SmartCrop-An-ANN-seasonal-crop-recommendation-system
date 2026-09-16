@@ -416,7 +416,9 @@ The web app will be available at `http://localhost:3000`.
 
 ---
 
-## 📌 Status
+## 📌 Deployment Limitation
 
-🚧 *Development in progress.*
+🚧 *
+
+The backend is currently not deployed because the requirements.txt file contains a large number of dependencies and some of them are not supported within the limitations of free deployment platforms such as Vercel. Therefore, the backend is intended to be run locally for the current version of the project.*
 
